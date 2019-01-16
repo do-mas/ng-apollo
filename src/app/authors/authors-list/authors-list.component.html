@@ -1,0 +1,7 @@
+  <div *ngFor="let author of (authors2 | async)?.authors" >
+    <div>
+      {{ author.name }}
+      <button (click)="update(author.id)">modify</button>
+      <a [routerLink]="'/authors/'+author.id">view</a>
+    </div>
+  </div>

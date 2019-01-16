@@ -1,0 +1,8 @@
+<div *ngIf="(author | async)?.author as author">
+  <h1>{{ author.id }}</h1>
+  <h1>{{ author.name }}</h1>
+  <h2>{{ author.year }}</h2>
+  <button (click)="update(author.id)">update</button>
+</div>
+
+{{(author | async) | json}}
